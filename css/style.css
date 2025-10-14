@@ -1,0 +1,183 @@
+@import
+url('https://fonts.googleapis.com/css2?family=Miniver&family=Ribeye&family=Righteous&display=swap');
+
+body{
+    background-color: #3b141c;
+}
+
+
+.container-header {
+    display: flex; /* Alinea los elementos horizontalmente */
+    justify-content: space-between; /* Espacia el logo y la barra de nav*/
+    align-items: center; 
+    padding: 10px; /* Agrega un pequeño margen alrededor de los elementos */
+    background: #252525;
+}
+.logo a {
+    text-decoration: none;/* Elimina el subrayado*/
+    color: #fff;
+    font-size: 25px;
+    font-family: miniver, sans-serif;
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px; /* Espacio entre los elementos */
+}
+
+nav ul li a {
+    text-decoration: none; 
+    color: white; 
+    font-size: 18px; /* Tamaño de la fuente */
+    padding: 10px 15px;
+    border-radius:25px;
+
+}
+nav ul li a:hover{
+    color: #3b141c;
+    background-color: #f3961c;
+    transition: background-color 0.3s, color 0.3s;
+}
+.texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 50%;
+
+}
+h2{
+    color: #f3961c;
+    font-family: miniver, sans-serif;
+}
+h1{
+    color: #fff;
+    font-size: 35px;
+}
+
+p{
+    color: #fff;
+    font-size: 22px;
+
+}
+.botones button{
+    color: #3b141c;
+    border: none;
+    border-radius:25px;
+    background-color: #f3961c;
+    padding: 7px 15px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+    margin-top: 15px
+
+}
+button:hover{
+    color: #fff;
+}
+
+.home{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 70px;
+}
+#menu-toggle{
+    display: none;
+}
+.menu-icon{
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color:   #7b58da;
+    margin-left: auto;
+    border-radius: 20px;
+}
+/*RESPONSIVE*/
+@media(max-width: 768px) {
+  /* ícono hamburguesa */
+  .menu-icon {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+    color: #f3961c;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    z-index: 300;
+  }
+
+  /* menú oculto */
+  .nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(64, 60, 75, 0.95);
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    padding: 10px 0;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(15, 5, 43, 0.8);
+    z-index: 250;
+  }
+
+  /* mostrar menú al activar */
+  #menu-toggle:checked ~ .nav ul {
+    display: flex;
+  }
+
+  .nav ul li {
+    margin: 5px 0;
+  }
+
+  .nav ul li a {
+    color: #fff;
+    padding: 10px 15px;
+    display: block;
+    text-align: left;
+  }
+}
+
+
+/* Responsive para celulares */
+@media (max-width: 768px) {
+  
+
+    .home {
+        flex-direction: column;  /* texto e imagen en columna */
+        padding: 15px;
+    }
+
+    .texto {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .botones button {
+        margin: 10px 0;         
+        width: 80%;              
+    }
+}
+
+
+
+

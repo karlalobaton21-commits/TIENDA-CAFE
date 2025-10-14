@@ -1,0 +1,208 @@
+@import
+url('https://fonts.googleapis.com/css2?family=Miniver&family=Ribeye&family=Righteous&display=swap');
+body{
+    background-color: #252525;
+}
+.container-header {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
+    padding: 10px; 
+    background: #3b141c;
+}
+.logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+    font-family: miniver, sans-serif;
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px; 
+}
+
+nav ul li a {
+    text-decoration: none; 
+    color: white; 
+    font-size: 18px; 
+    padding: 10px 15px;
+    border-radius:25px;
+
+}
+nav ul li a:hover{
+    color: #3b141c;
+    background-color: #f3961c;
+    transition: background-color 0.3s, color 0.3s;
+}
+.carrito {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+.carrito #contador-carrito {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: #f3961c;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+.caja{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    height: 100vh;
+    padding: 50px;
+}
+h1{
+    text-align: center;
+    color: #fff;
+}
+h2{
+  color: #;
+}
+
+.ecard{
+    
+    min-width: 300px;
+    max-width: 400px;
+    min-height: 450px;
+    background: linear-gradient(to bottom, #240e12, #531624);
+    border-radius: 35px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    padding: 20px 20px 70px 20px;
+    transition: transform 0.3s ease, background 0.5s ease;
+}
+.ecard:hover{
+    transform: scale(1.05);
+    background: #520816b4;
+    box-shadow: 0 8px 16px rgb(0,0,0);
+}
+.text{
+    margin: 0.5rem 0;
+    color: #fff;
+}
+.text h2{
+    font-size: 1.2 rem;
+    margin-bottom: 0.5rem;
+    min-height: 40px;
+}
+
+img{
+    align-self: center;
+    padding: 15px 15px 10px 1px;
+    min-width: 100px;
+    max-width: 100%;
+    border-radius: 30px;
+
+}
+.boton {
+  display: flex;
+  justify-content: center; 
+  gap: 10px;                
+  margin-top: auto;         
+}
+
+.comprar,
+.detalle {
+  background:#f3961c;
+  color: #fff;
+  border: none;
+  padding: 25px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.comprar:hover {
+  background: #252525;
+}
+
+.detalle:hover {
+  background: #252525;
+  color: #fff;
+}
+#menu-toggle{
+    display: none;
+}
+.menu-icon{
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color:   #7b58da;
+    margin-left: auto;
+    border-radius: 20px;
+}
+/*RESPONSIVE*/
+@media(max-width: 768px) {
+  /* ícono hamburguesa */
+  .menu-icon {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+    color: #f3961c;
+    position: absolute;
+    right: 70px;
+    top: 15px;
+    z-index: 300;
+  }
+
+  /* menú oculto */
+  .nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(64, 60, 75, 0.95);
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    padding: 10px 0;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(15, 5, 43, 0.8);
+    z-index: 250;
+  }
+
+  /* mostrar menú al activar */
+  #menu-toggle:checked ~ .nav ul {
+    display: flex;
+  }
+
+  .nav ul li {
+    margin: 5px 0;
+  }
+
+  .nav ul li a {
+    color: #fff;
+    padding: 10px 15px;
+    display: block;
+    text-align: left;
+  }
+  
+}
+
+
+

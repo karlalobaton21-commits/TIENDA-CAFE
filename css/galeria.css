@@ -1,0 +1,151 @@
+@import
+url('https://fonts.googleapis.com/css2?family=Miniver&family=Ribeye&family=Righteous&display=swap');
+body{
+    height: 100vh;
+     background: linear-gradient(to top, #615356, #ccc);
+     background-size: cover;
+     background-repeat: no-repeat;
+}
+.container-header {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
+    padding: 10px; 
+    background: #3b141c;
+}
+.logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+    font-family: miniver, sans-serif;
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px; 
+}
+
+nav ul li a {
+    text-decoration: none; 
+    color: white; 
+    font-size: 18px; 
+    padding: 10px 15px;
+    border-radius:25px;
+
+}
+nav ul li a:hover{
+    color: #3b141c;
+    background-color: #f3961c;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+h1{
+    color: #3b141c;
+    text-align: center;
+    padding:70px;
+}
+h1::after{
+content: "";               
+    display: block; /*es un bloque, se posiciona debajo de lo anterior y ocupa todo el ancho*/
+    width: 60px;               
+    height: 4px;               
+    background-color: #f1c40f;
+    margin: 8px auto 0;        /* 8px es el espaciado entre h1 y el palito, auto 0 es para centrarlo */
+    border-radius: 2px;    
+}
+
+.galeria {
+    display: grid; /*el contenedor se acomoda en una cuadricula*/
+    grid-template-columns: repeat(3, 1fr); /*la cuadricula se divide en tres partes iguales 1fr →  “una fracción del espacio disponible”.*/
+    gap: 10px;
+    margin: 20px auto;
+    max-width: 1200px; 
+}
+
+.galeria img {
+    width: 100%;
+    height: 250px; /* altura fija */
+    object-fit: cover; 
+    border-radius: 8px; 
+}
+#menu-toggle{
+    display: none;
+}
+.menu-icon{
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color:   #7b58da;
+    margin-left: auto;
+    border-radius: 20px;
+}
+/*RESPONSIVE*/
+@media(max-width: 768px) {
+  /* ícono hamburguesa */
+  .menu-icon {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+    color: #f3961c;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    z-index: 300;
+  }
+
+  /* menú oculto */
+  .nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(64, 60, 75, 0.95);
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    padding: 10px 0;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(15, 5, 43, 0.8);
+    z-index: 250;
+  }
+
+  /* mostrar menú al activar */
+  #menu-toggle:checked ~ .nav ul {
+    display: flex;
+  }
+
+  .nav ul li {
+    margin: 5px 0;
+  }
+
+  .nav ul li a {
+    color: #fff;
+    padding: 10px 15px;
+    display: block;
+    text-align: left;
+  }
+}
+
+/* Responsive para celulares */
+@media (max-width: 768px) {
+  
+
+    .galeria {
+        display: flex;
+        flex-direction: column;  /* texto e imagen en columna */
+        padding: 20px;
+
+    }
+
+   
+}
+
