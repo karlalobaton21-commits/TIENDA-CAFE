@@ -2,7 +2,7 @@
 url('https://fonts.googleapis.com/css2?family=Miniver&family=Ribeye&family=Righteous&display=swap');
 
 body{
-    background-color: #f4f4f5;
+    background-color: #f1f1f1;
     font-family: "Montserrat", sans-serif;
 }
 .container-header {
@@ -69,8 +69,6 @@ h1::after{
   justify-content: space-evenly;
   align-items: center;
   margin: 0 auto;
-
-
 }
 
 

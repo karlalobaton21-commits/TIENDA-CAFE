@@ -78,9 +78,7 @@ h1{
     text-align: center;
     color: #fff;
 }
-h2{
-  color: #;
-}
+
 
 .ecard{
     
@@ -120,14 +118,14 @@ img{
     border-radius: 30px;
 
 }
-.boton {
+.boton{
   display: flex;
   justify-content: center; 
   gap: 10px;                
   margin-top: auto;         
 }
 
-.comprar,
+.btncomprar,
 .detalle {
   background:#f3961c;
   color: #fff;
